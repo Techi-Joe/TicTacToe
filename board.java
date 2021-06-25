@@ -3,11 +3,11 @@ package com.company.games.Games;
 import java.util.Arrays;
 
 public class board {
-    private final String[] board = new String[6];
+    private final String[] board = new String[9];
 
     public board() {
         // clear board
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 9; i++) {
             board[i] = "";
         }
     }
