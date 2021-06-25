@@ -26,6 +26,10 @@ public class board {
 
     @Override
     public String toString() {
-        return Arrays.toString(board);
+        String str = "";
+        for (int i = 0; i < 9; i++) {
+
+        }
+        return str;
     }
 }

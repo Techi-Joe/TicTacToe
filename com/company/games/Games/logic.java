@@ -19,10 +19,10 @@ public class logic {
         String[] board = b.getBoard();
         for (int i = 0; i < 9; i++) {
             if (board[i].equals(String.format("%2d", i))) {
-                return false;
+                return true;
             }
         }
-        return true;
+        return false;
     }
 
 }
