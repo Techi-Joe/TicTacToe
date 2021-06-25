@@ -8,7 +8,7 @@ public class board {
     public board() {
         // clear board
         for (int i = 0; i < 9; i++) {
-            board[i] = "";
+            board[i] = String.format("%2d", i+1);
         }
     }
 
