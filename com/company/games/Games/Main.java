@@ -12,6 +12,10 @@ public class Main {
         while (!logic.winState(b) && !logic.isFull(b)) {
             System.out.print("Enter tile number: ");
             int input = scan.nextInt();
+            while (!logic.isValidInput(b, input)) {
+                System.out.println("\n\nError: incorrect user input!\nPlease try again: ");
+                input = scan.nextInt();
+            }
             b.place(player, input-1);
             player = !player;
             System.out.println();

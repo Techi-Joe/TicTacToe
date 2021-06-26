@@ -26,10 +26,14 @@ public class board {
 
     @Override
     public String toString() {
-        String str = "";
-        for (int i = 0; i < 9; i++) {
+        return String.format("""
 
-        }
-        return str;
+                         %s | %s | %s\s
+                        ——————————————
+                         %s | %s | %s
+                        ——————————————
+                         %s | %s | %s\s
+                        """,
+                board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
     }
 }

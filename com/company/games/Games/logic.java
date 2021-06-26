@@ -18,11 +18,17 @@ public class logic {
     public static boolean isFull(board b) {
         String[] board = b.getBoard();
         for (int i = 0; i < 9; i++) {
-            if (board[i].equals(String.format("%2d", i))) {
-                return true;
+            if ((board[i]).equals(String.format("%2d", i)) ||
+                    (Integer.parseInt(board[i]) > 9 || Integer.parseInt(board[i]) < 1)) { // TODO: fix NumberFormatException
+                return false;
             }
         }
-        return false;
+        return true;
+    }
+
+    public static boolean isValidInput(board b, int in) {
+        String[] board = b.getBoard();
+        return (!board[in].equals("X") || !board[in].equals("O"));
     }
 
 }
