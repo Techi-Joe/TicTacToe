@@ -7,14 +7,18 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         board b = new board();
+        int input = 1;
         System.out.println(b);
         boolean player = true;
-        while (!logic.winState(b) && logic.isFull(b)) {
+        while (!logic.winState(b) && !board.isFull()) {
             System.out.print("Enter tile number: ");
-            int input = scan.nextInt();
-            while (!logic.isValidInput(b, input-1)) {
-                System.out.print("\n\nError: incorrect user input!\nPlease try again: ");
+            while (true) {
                 input = scan.nextInt();
+                if (logic.isValidInput(b, input-1)) {
+                    break;
+                } else {
+                    System.out.print("\n\nError: incorrect user input!\nPlease try again: ");
+                }
             }
             b.place(player, input-1);
             player = !player;

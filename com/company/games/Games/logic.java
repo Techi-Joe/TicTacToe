@@ -15,15 +15,6 @@ public class logic {
                 (board[2].equals(board[4]) && board[4].equals(board[6]));
     }
 
-    public static boolean isFull(board b) {
-        String[] board = b.getBoard();
-        for (int i = 0; i < 9; i++) {
-            if ((board[i]).equals(String.format("%d", i))) {
-                return false;
-            }
-        }
-        return true;
-    }
 
     public static boolean isValidInput(board b, int in) {
         String[] board = b.getBoard();
