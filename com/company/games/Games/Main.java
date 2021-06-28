@@ -9,11 +9,11 @@ public class Main {
         board b = new board();
         System.out.println(b);
         boolean player = true;
-        while (!logic.winState(b) && !logic.isFull(b)) {
+        while (!logic.winState(b) && logic.isFull(b)) {
             System.out.print("Enter tile number: ");
             int input = scan.nextInt();
-            while (!logic.isValidInput(b, input)) {
-                System.out.println("\n\nError: incorrect user input!\nPlease try again: ");
+            while (!logic.isValidInput(b, input-1)) {
+                System.out.print("\n\nError: incorrect user input!\nPlease try again: ");
                 input = scan.nextInt();
             }
             b.place(player, input-1);

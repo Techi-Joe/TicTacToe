@@ -18,8 +18,7 @@ public class logic {
     public static boolean isFull(board b) {
         String[] board = b.getBoard();
         for (int i = 0; i < 9; i++) {
-            if ((board[i]).equals(String.format("%2d", i)) ||
-                    (Integer.parseInt(board[i]) > 9 || Integer.parseInt(board[i]) < 1)) { // TODO: fix NumberFormatException
+            if ((board[i]).equals(String.format("%d", i))) {
                 return false;
             }
         }
@@ -28,7 +27,14 @@ public class logic {
 
     public static boolean isValidInput(board b, int in) {
         String[] board = b.getBoard();
-        return (!board[in].equals("X") || !board[in].equals("O"));
+//        System.out.println((!board[in].equals("X") && !board[in].equals("O")));
+//        System.out.println((Integer.parseInt(board[in]) <= 9 && Integer.parseInt(board[in]) >= 1));
+        try {
+            return ((Integer.parseInt(board[in]) <= 9 && Integer.parseInt(board[in]) >= 1) &&
+                    (!board[in].equals("X") && !board[in].equals("O")));
+        } catch (ArrayIndexOutOfBoundsException e) {
+            return false;
+        }
     }
 
 }
