@@ -20,10 +20,11 @@ public class logic {
         String[] board = b.getBoard();
 //        System.out.println((!board[in].equals("X") && !board[in].equals("O")));
 //        System.out.println((Integer.parseInt(board[in]) <= 9 && Integer.parseInt(board[in]) >= 1));
+
         try {
             return ((Integer.parseInt(board[in]) <= 9 && Integer.parseInt(board[in]) >= 1) &&
                     (!board[in].equals("X") && !board[in].equals("O")));
-        } catch (ArrayIndexOutOfBoundsException e) {
+        } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
             return false;
         }
     }

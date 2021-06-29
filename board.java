@@ -1,7 +1,5 @@
 package com.company.games.Games;
 
-import java.util.Arrays;
-
 public class board {
     private final String[] board = new String[9];
     private static int count = 0;
