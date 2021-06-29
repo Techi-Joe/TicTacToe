@@ -13,19 +13,19 @@ public class logic {
                 (board[2].equals(board[4]) && board[4].equals(board[6]));
     }
 
+// TERMINAL-BASED CODE:
+//     public static boolean isValidInput(board b, String input) {
+//         String[] board = b.getBoard();
+// //        System.out.println((!board[in].equals("X") && !board[in].equals("O")));
+// //        System.out.println((Integer.parseInt(board[in]) <= 9 && Integer.parseInt(board[in]) >= 1));
 
-    public static boolean isValidInput(board b, String input) {
-        String[] board = b.getBoard();
-//        System.out.println((!board[in].equals("X") && !board[in].equals("O")));
-//        System.out.println((Integer.parseInt(board[in]) <= 9 && Integer.parseInt(board[in]) >= 1));
-
-        try {
-            int in = Integer.parseInt(input) - 1;
-            return ((Integer.parseInt(board[in]) <= 9 && Integer.parseInt(board[in]) >= 1) &&
-                    (!board[in].equals("X") && !board[in].equals("O")));
-        } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
-            return false;
-        }
-    }
+//         try {
+//             int in = Integer.parseInt(input) - 1;
+//             return ((Integer.parseInt(board[in]) <= 9 && Integer.parseInt(board[in]) >= 1) &&
+//                     (!board[in].equals("X") && !board[in].equals("O")));
+//         } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
+//             return false;
+//         }
+//     }
 
 }
