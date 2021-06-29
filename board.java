@@ -1,5 +1,3 @@
-package com.company.games.Games;
-
 public class board {
     private final String[] board = new String[9];
     private static int count = 0;
@@ -30,14 +28,7 @@ public class board {
 
     @Override
     public String toString() {
-        return String.format("""
-
-                         %s | %s | %s\s
-                        ——————————————
-                         %s | %s | %s
-                        ——————————————
-                         %s | %s | %s\s
-                        """,
+        return String.format(" %s | %s | %s\n——————————————\n %s | %s | %s\n——————————————\n %s | %s | %s\n",
                 board[0], board[1], board[2], board[3], board[4], board[5], board[6], board[7], board[8]);
     }
 }

@@ -1,5 +1,3 @@
-package com.company.games.Games;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -28,7 +26,6 @@ public class Main {
                     System.out.print("\n\nError: incorrect user input!\nPlease try again: ");
                 }
             }
-
             b.place(player, input-1);
             player = !player;
 
@@ -45,5 +42,6 @@ public class Main {
         } else {
             System.out.println("Tie!");
         }
+        scan.close();
     }
 }

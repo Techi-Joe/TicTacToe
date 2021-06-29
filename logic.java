@@ -1,5 +1,3 @@
-package com.company.games.Games;
-
 public class logic {
 
     // returns true if the game is won, false otherwise
