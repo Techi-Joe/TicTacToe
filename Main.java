@@ -7,6 +7,7 @@ public class Main {
 
         Scanner scan = new Scanner(System.in);
         board b = new board();
+        String TIn = "";
         int input = 1;
         System.out.println(b);
         boolean player = true;
@@ -15,14 +16,11 @@ public class Main {
             System.out.print("Enter tile number: ");
 
             while (true) {
-                try {
-                    input = scan.nextInt();
-                } catch (InputMismatchException e) {
-                    input = -1;
-                }
-                if (logic.isValidInput(b, input - 1)) {
+                TIn = scan.nextLine();
+                if (logic.isValidInput(b, TIn)) {
+                    input = Integer.parseInt(TIn);
                     break;
-                } else if (input != -1) {
+                } else {
                     System.out.print("\n\nError: incorrect user input!\nPlease try again: ");
                 }
             }
